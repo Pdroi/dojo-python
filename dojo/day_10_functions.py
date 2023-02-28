@@ -177,7 +177,6 @@ numbers = [2, 3, 7, 9]
 print(remove_item(numbers, 3))
 
 
- """
 # Declare a function named sum_of_numbers. It takes a number parameter and it adds all the numbers in that range.
 #               print(sum_of_numbers(5))  # 15
 #               print(sum_all_numbers(10)) # 55
@@ -190,22 +189,126 @@ print(sum_of_numbers(5))  # 15
 print(sum_of_numbers(10)) # 55
 print(sum_of_numbers(100)) # 5050
 
-""" 
-Declare a function named sum_of_odds. It takes a number parameter and it adds all the odd numbers in that range.
-Declare a function named sum_of_even. It takes a number parameter and it adds all the even numbers in that - range.
-Exercises: Level 2
-Declare a function named evens_and_odds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
-    print(evens_and_odds(100))
-    # The number of odds are 50.
-    # The number of evens are 51.
-Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
-Call your function is_empty, it takes a parameter and it checks if it is empty or not
-Write different functions which take lists. They should calculate_mean, calculate_median, calculate_mode, calculate_range, calculate_variance, calculate_std (standard deviation).
-Exercises: Level 3
-Write a function called is_prime, which checks if a number is prime.
-Write a functions which checks if all items are unique in the list.
-Write a function which checks if all the items of the list are of the same data type.
-Write a function which check if provided variable is a valid python variable
-Go to the data folder and access the countries-data.py file.
-Create a function called the most_spoken_languages in the world. It should return 10 or 20 most spoken languages in the world in descending order
-Create a function called the most_populated_countries. It should return 10 or 20 most populated countries in descending order. """
+
+# Declare a function named sum_of_odds. It takes a number parameter and it adds all the odd numbers in that range.
+
+def sum_of_odds(n):
+    total = 0
+    for i in range(1, n+1, 2):
+        total += i
+    return total
+  
+print(sum_of_odds(10))
+
+
+# Declare a function named sum_of_even. It takes a number parameter and it adds all the even numbers in that - range.
+
+def sum_of_even(n):
+    total = 0
+    for i in range(0, n+1, 2):
+        total += i
+    return total
+  
+print(sum_of_even(10))
+
+ """
+# Declare a function named evens_and_odds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+                # print(evens_and_odds(100))
+                # The number of odds are 50.
+                # The number of evens are 51.
+
+
+# Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n- 1)
+    
+print(factorial(10))
+
+
+# Call your function is_empty, it takes a parameter and it checks if it is empty or not
+
+def is_empty(x):
+    if not x:
+        print('variable is not empty')
+    else: 
+        print('variable is empty')
+
+param = ''
+param2 = 2
+is_empty(param)
+is_empty(param2)
+
+
+# Write different functions which take lists. They should calculate_mean, calculate_median, calculate_mode, calculate_range, calculate_variance, calculate_std (standard deviation).
+import statistics
+
+def calculate_mean(lst):
+    x = statistics.mean(lst)
+    return x
+
+def calculate_median(lst):
+    x = statistics.median(lst)
+    return x
+
+def calculate_mode(lst):
+    x = statistics.mode(lst)
+    return x
+
+def calculate_range(lst):
+    x = range(lst)
+    return x
+
+def calculate_variance(lst):
+    x = statistics.variance(lst)
+    return x
+
+def calculate_std(lst):
+    x = statistics.stdev(lst)
+    return x
+
+print(calculate_variance([10,20,30]))
+
+
+# Write a function called is_prime, which checks if a number is prime.
+
+def is_prime(n):
+    for i in range(2, n+-1):
+        if n % i == 0:
+            print("is not prime", i, "is divisor")
+            return False
+    print("it's prime")
+    return True
+
+is_prime(17)
+
+
+# Write a functions which checks if all items are unique in the list.
+
+def check_unique(lst):
+    for i in lst:
+        if i in lst:
+            print('item ', i, ' is repeated')
+            break
+        else:
+            print('items are unique')
+
+
+lista = ['manzana','pera','kiwi','platano']
+
+check_unique(lista)
+
+# Write a function which checks if all the items of the list are of the same data type.
+
+# Write a function which check if provided variable is a valid python variable
+
+# Go to the data folder and access the countries-data.py file.
+
+# Create a function called the most_spoken_languages in the world. It should return 10 or 20 most spoken languages in the world in descending order
+
+# Create a function called the most_populated_countries. It should return 10 or 20 most populated countries in descending order. 
+
+set.
