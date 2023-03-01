@@ -211,7 +211,6 @@ def sum_of_even(n):
   
 print(sum_of_even(10))
 
- """
 # Declare a function named evens_and_odds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
                 # print(evens_and_odds(100))
                 # The number of odds are 50.
@@ -289,17 +288,18 @@ is_prime(17)
 # Write a functions which checks if all items are unique in the list.
 
 def check_unique(lst):
+    check = []
     for i in lst:
-        if i in lst:
+        if i in check:
             print('item ', i, ' is repeated')
-            break
         else:
-            print('items are unique')
-
+            check.append(i)
+    return check
 
 lista = ['manzana','pera','kiwi','platano']
 
-check_unique(lista)
+print(check_unique(lista))
+ """
 
 # Write a function which checks if all the items of the list are of the same data type.
 
@@ -310,5 +310,3 @@ check_unique(lista)
 # Create a function called the most_spoken_languages in the world. It should return 10 or 20 most spoken languages in the world in descending order
 
 # Create a function called the most_populated_countries. It should return 10 or 20 most populated countries in descending order. 
-
-set.
